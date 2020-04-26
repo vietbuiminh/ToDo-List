@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>ToDo List</title>
+</head>
+<body>
+  <h1 class="title" onclick="alert('This is a todo list web created by Viet Bui :)')">Stuff I Need To Do</h1>
+
+  <div class="all-tasks">
+    <h2 class="task-list-title">My Lists</h2>
+    <ul class="task-list">
+      <li class="list-name active-list">Youtube</li>
+      <li class="list-name">Work</li>
+      <li class="list-name">Grocery</li>
+    </ul>
+
+    <form action="">
+      <input 
+        type="text"
+        class="new list"
+        placeholder="new list name"
+        aria-label="new list name"
+      >
+      <button class="btn create" aria-label="create new list">+</button>
+    </form>
+  </div>
+
+  <div class="todo-list">
+    <div class="todo-header">
+      <h2 class="list-title">Youtube</h2>
+      <p class="task-count">3 tasks remaining</p>
+    </div>
+
+    <div class="todo-body">
+      <!-- /Task 1-->
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" id="task-1">
+          <label for="task-1"> <!--this is to also click on the word if it's used by mobile -->
+            <span class="custom-checkbox"></span>
+            doing homework
+          </label>
+        </div>
+      </div>
+      <!-- /Task 2-->
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" id="task-2">
+          <label for="task-2">
+            <span class="custom-checkbox"></span>
+            upload on GitHub
+          </label>
+        </div>
+      </div>
+      <!-- /Task 3-->
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" id="task-3">
+          <label for="task-3">
+            <span class="custom-checkbox"></span>
+            watching coding video
+          </label>
+        </div>
+      </div>
+
+      <div class="new-task-creator">
+        <form action="">
+          <input 
+            type="text"
+            class="new task"
+            placeholder="new task name"
+            aria-label="new task name"
+          >
+          <button class="btn create" aria-label="create new task">+</button>
+        </form>
+      </div>
+
+      <div class="delete">
+        <button class="btn delete">Clear completed tasks</button>
+        <button class="btn delete">Delete list</button>
+      </div>
+    </div>
+  </div>
+  <footer class="mainFooter">Copyright &copy; Viet Bui 2020</footer>
+
+</body>
+</html>
