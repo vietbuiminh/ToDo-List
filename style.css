@@ -41,7 +41,29 @@ body {
 }
 
 
+.my-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15%;
+}
 
+.clear-all-btn {
+  left: 20px;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background: inherit;
+  color: inherit;
+  padding: 7px 10px;
+  transition: color 200ms ease-in;
+}
+
+.clear-all-btn:hover {
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 25px;
+  color: rgb(0,0,0);
+}
 
 .task-list {
   line-height: 1.7;
