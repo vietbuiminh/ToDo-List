@@ -40,36 +40,7 @@
 
     <div class="todo-body">
       <!-- /Task 1-->
-      <div class="tasks" data-tasks>
-        <div class="task">
-          <input type="checkbox" id="task-1">
-          <label for="task-1"> <!--this is to also click on the word if it's used by mobile -->
-            <span class="custom-checkbox"></span>
-            doing homework
-          </label>
-        </div>
-      </div>
-      <!-- /Task 2-->
-      <div class="tasks">
-        <div class="task">
-          <input type="checkbox" id="task-2">
-          <label for="task-2">
-            <span class="custom-checkbox"></span>
-            upload on GitHub
-          </label>
-        </div>
-      </div>
-      <!-- /Task 3-->
-      <div class="tasks">
-        <div class="task">
-          <input type="checkbox" id="task-3">
-          <label for="task-3">
-            <span class="custom-checkbox"></span>
-            watching coding video
-          </label>
-        </div>
-      </div>
-
+      <div class="tasks" data-tasks></div>
       <div class="new-task-creator">
         <form action="">
           <input 
@@ -90,5 +61,13 @@
   </div>
   <footer class="mainFooter">Copyright &copy; Viet Bui 2020</footer>
 
+  <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+  </template>
 </body>
 </html>
