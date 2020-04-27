@@ -5,11 +5,10 @@ body {
   font-size: 1.5rem;
   background: rgb(0, 206, 221);
   color: white;
-  height: 100%;
   display: grid;
   grid:
     "header header header todo" auto
-    "...... lists  active ......" auto
+    "...... lists  button ......" auto
     "...... list  button ......" auto
     "...... footer footer ......" auto /
     1fr minmax(100px, 300px) minmax(250px, 500px)  1fr;
@@ -37,7 +36,6 @@ body {
 
 .all-tasks {
   grid-area: lists;
-  height: 100%;
 }
 
 
@@ -152,11 +150,11 @@ form {
 }
 
 .todo-list {
-  grid-area: active;
+  grid-area: button;
   --spacer: 2rem;
   bottom: 10px;
   border-radius: 25px;
-  grid-area: active;
+  /* grid-area: active; */
   background: white;
   color: rgba(0, 0, 0, 0.808);
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.295);
