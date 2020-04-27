@@ -130,6 +130,7 @@ form {
   background: white;
   color: rgba(0, 0, 0, 0.808);
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: box-shadow 350ms ease-in-out;
 }
 
 .todo-header {
@@ -141,12 +142,21 @@ form {
   justify-content: space-between;
 }
 
+.todo-list:hover {
+  box-shadow: 3px 5px 30px rgba(0, 0, 0, 0.425);
+}
+
 .list-title {
   margin: 0 1rem 0 0;
 }
 
 .task-count {
   margin: 0;
+  transition: font-weight 350ms ease-in-out;
+}
+
+.task-count:hover {
+  font-weight: bolder;
 }
 
 .todo-body {
