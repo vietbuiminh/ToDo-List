@@ -4,7 +4,6 @@ const listsContainer = document.querySelector('[data-lists]')
 let lists = ['name', 'todo']
 
 function render() {
-  <li class="list-name">Work</li>
   clearElement(listsContainer)
   lists.forEach(list => {
     const listElement = document.createElement('li')
