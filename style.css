@@ -5,13 +5,14 @@ body {
   font-size: 1.5rem;
   background: rgb(0, 206, 221);
   color: white;
-
+  height: 100%;
   display: grid;
   grid:
-    "header header header header" auto
+    "header header header todo" auto
     "...... lists  active ......" auto
-    "footer footer footer footer" auto /
-    1fr minmax(100px, 300px) minmax(250px, 500px) minmax(20px, 20px) 1fr;
+    "...... list  button ......" auto
+    "...... footer footer ......" auto /
+    1fr minmax(100px, 300px) minmax(250px, 500px)  1fr;
 }
 
 .title {
@@ -23,6 +24,12 @@ body {
   transition: color 250ms ease-in-out;
 }
 
+.todo {
+  grid-area: todo;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.541);
+}
+
 .title:hover {
   color: rgba(0, 0, 0, 0.637);
   cursor: pointer;
@@ -30,12 +37,11 @@ body {
 
 .all-tasks {
   grid-area: lists;
+  height: 100%;
 }
 
-.mainFooter {
-  grid: footer;
-  font-size: 0.75em;
-}
+
+
 
 .task-list {
   line-height: 1.7;
@@ -124,7 +130,9 @@ form {
 }
 
 .todo-list {
+  grid-area: active;
   --spacer: 2rem;
+  bottom: 10px;
   border-radius: 25px;
   grid-area: active;
   background: white;
@@ -239,16 +247,20 @@ form {
   transform-origin: left;
 }
 
+.button-lists {
+  grid-area: active;
+  padding: 10px ;
+}
 .delete {
+  
   font-family: 'Roboto Slab', serif;
   display: flex;
   justify-content: space-evenly;
   position: relative;
   width: 100%;
   left: 0;
-  bottom: -35px;
-  color: white;
-  padding-left: 20px;
+  color: rgb(212, 211, 211);
+  padding: 7px 5px;
 }
 
 .btn.delete {
@@ -260,4 +272,15 @@ form {
 .btn.delete:hover {
   background: rgba(0, 0, 0, 0.14);
   border-radius: 25px;
+  color: rgb(0,0,0);
+}
+
+.mainFooter {
+  grid-area: footer;
+  font-size: 0.75em;
+  padding-top: 300px;
+  padding-bottom: 20px;
+  /* text-align: center; */
+  font-weight: 200;
+  position: relative;
 }
