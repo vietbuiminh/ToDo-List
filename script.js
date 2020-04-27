@@ -38,7 +38,7 @@ newListForm.addEventListener('submit', e => {
 })
 
 function createList(name) {
-  return {id: Date.now().toString(), name: name, task: []}
+  return {id: Date.now().toString(), name: name, tasks: []}
 }
 
 function saveAndRender() {
@@ -55,11 +55,20 @@ function render() {
   clearElement(listsContainer)
   renderLists()
 
+  const selectedList = lists.find(list => list.id === selectedListId)
   if (selectedListId == null) {
     listDisplayContainer.style.display = 'none'
   } else {
     listDisplayContainer.style.display = ''
+    listTitleElement.innerText = selectedList.name
+    renderTaskCount(selectedList)
   }
+}
+
+function renderTaskCount(selectedList) {
+  const incompleteTaskCount = selectedList.tasks.filter(task => !task.complete).length
+  const taskString = incompleteTaskCount === 1 ? "task" : "tasks"
+  listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`
 }
 
 function renderLists() {
